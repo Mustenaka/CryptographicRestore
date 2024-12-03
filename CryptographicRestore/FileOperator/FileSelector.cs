@@ -27,6 +27,25 @@ public static class FileSelector
     }
 
     /// <summary>
+    /// 打开文件夹选择窗口，选择一个文件夹并返回其路径
+    /// </summary>
+    /// <returns>所选文件夹的路径，如果没有选择文件夹则返回 null</returns>
+    public static string? SelectFolder()
+    {
+        using (var folderBrowserDialog = new FolderBrowserDialog())
+        {
+            folderBrowserDialog.Description = @"请选择一个文件夹";
+
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                return folderBrowserDialog.SelectedPath;
+            }
+        }
+
+        return null;
+    }
+
+    /// <summary>
     /// 打开文件夹选择窗口，选择目标路径，并将指定文件拷贝到该路径
     /// </summary>
     /// <param name="sourceFilePath">源文件路径</param>

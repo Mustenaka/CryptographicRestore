@@ -1,14 +1,14 @@
 ﻿namespace CryptographicRestore
 {
-    partial class MainForm
+    partial class FolderCryptForm
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,8 +23,8 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -56,10 +56,10 @@
             GBox_Origin.Controls.Add(Btn_OriginInput);
             GBox_Origin.Controls.Add(Inp_OriginFile);
             GBox_Origin.Controls.Add(Lab_OriginFile);
-            GBox_Origin.Location = new Point(12, 12);
+            GBox_Origin.Location = new Point(19, 31);
             GBox_Origin.Name = "GBox_Origin";
             GBox_Origin.Size = new Size(405, 426);
-            GBox_Origin.TabIndex = 0;
+            GBox_Origin.TabIndex = 3;
             GBox_Origin.TabStop = false;
             GBox_Origin.Text = "原始";
             // 
@@ -87,7 +87,7 @@
             Btn_OriginInput.Name = "Btn_OriginInput";
             Btn_OriginInput.Size = new Size(112, 28);
             Btn_OriginInput.TabIndex = 2;
-            Btn_OriginInput.Text = "载入文件";
+            Btn_OriginInput.Text = "载入文件夹";
             Btn_OriginInput.UseVisualStyleBackColor = true;
             Btn_OriginInput.Click += Btn_OriginInput_Click;
             // 
@@ -103,9 +103,9 @@
             Lab_OriginFile.AutoSize = true;
             Lab_OriginFile.Location = new Point(6, 43);
             Lab_OriginFile.Name = "Lab_OriginFile";
-            Lab_OriginFile.Size = new Size(46, 24);
+            Lab_OriginFile.Size = new Size(64, 24);
             Lab_OriginFile.TabIndex = 0;
-            Lab_OriginFile.Text = "文件";
+            Lab_OriginFile.Text = "文件夹";
             // 
             // GBox_Crypto
             // 
@@ -113,10 +113,10 @@
             GBox_Crypto.Controls.Add(Btn_Decrypt);
             GBox_Crypto.Controls.Add(Inp_CryptonFile);
             GBox_Crypto.Controls.Add(label1);
-            GBox_Crypto.Location = new Point(433, 12);
+            GBox_Crypto.Location = new Point(440, 31);
             GBox_Crypto.Name = "GBox_Crypto";
             GBox_Crypto.Size = new Size(405, 426);
-            GBox_Crypto.TabIndex = 1;
+            GBox_Crypto.TabIndex = 4;
             GBox_Crypto.TabStop = false;
             GBox_Crypto.Text = "加密";
             // 
@@ -150,9 +150,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(18, 44);
             label1.Name = "label1";
-            label1.Size = new Size(46, 24);
+            label1.Size = new Size(64, 24);
             label1.TabIndex = 2;
-            label1.Text = "文件";
+            label1.Text = "文件夹";
             // 
             // GBox_Decrypt
             // 
@@ -160,10 +160,10 @@
             GBox_Decrypt.Controls.Add(Btn_ExportFile);
             GBox_Decrypt.Controls.Add(Inp_DecryptFile);
             GBox_Decrypt.Controls.Add(label2);
-            GBox_Decrypt.Location = new Point(856, 12);
+            GBox_Decrypt.Location = new Point(863, 31);
             GBox_Decrypt.Name = "GBox_Decrypt";
             GBox_Decrypt.Size = new Size(405, 426);
-            GBox_Decrypt.TabIndex = 2;
+            GBox_Decrypt.TabIndex = 5;
             GBox_Decrypt.TabStop = false;
             GBox_Decrypt.Text = "解密";
             // 
@@ -181,7 +181,7 @@
             Btn_ExportFile.Name = "Btn_ExportFile";
             Btn_ExportFile.Size = new Size(112, 28);
             Btn_ExportFile.TabIndex = 5;
-            Btn_ExportFile.Text = "导出文件";
+            Btn_ExportFile.Text = "导出文件夹";
             Btn_ExportFile.UseVisualStyleBackColor = true;
             Btn_ExportFile.Click += Btn_ExportFile_Click;
             // 
@@ -197,20 +197,20 @@
             label2.AutoSize = true;
             label2.Location = new Point(6, 46);
             label2.Name = "label2";
-            label2.Size = new Size(46, 24);
+            label2.Size = new Size(64, 24);
             label2.TabIndex = 3;
-            label2.Text = "文件";
+            label2.Text = "文件夹";
             // 
-            // MainForm
+            // FolderCryptForm
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1286, 488);
-            Controls.Add(GBox_Decrypt);
-            Controls.Add(GBox_Crypto);
             Controls.Add(GBox_Origin);
-            Name = "MainForm";
-            Text = "文件对称加密 - 完全还原";
+            Controls.Add(GBox_Crypto);
+            Controls.Add(GBox_Decrypt);
+            Name = "FolderCryptForm";
+            Text = "文件夹对称加密 - 完全还原";
             GBox_Origin.ResumeLayout(false);
             GBox_Origin.PerformLayout();
             GBox_Crypto.ResumeLayout(false);
@@ -223,17 +223,17 @@
         #endregion
 
         private GroupBox GBox_Origin;
-        private GroupBox GBox_Crypto;
+        private RichTextBox RText_Origin;
+        private Button Btn_Crypton;
         private Button Btn_OriginInput;
         private TextBox Inp_OriginFile;
         private Label Lab_OriginFile;
-        private GroupBox GBox_Decrypt;
-        private Button Btn_Crypton;
-        private RichTextBox RText_Origin;
+        private GroupBox GBox_Crypto;
         private RichTextBox RText_Crypton;
         private Button Btn_Decrypt;
         private TextBox Inp_CryptonFile;
         private Label label1;
+        private GroupBox GBox_Decrypt;
         private RichTextBox RText_Decrypt;
         private Button Btn_ExportFile;
         private TextBox Inp_DecryptFile;
